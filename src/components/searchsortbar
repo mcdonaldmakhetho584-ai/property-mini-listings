@@ -1,0 +1,47 @@
+<template>
+  <div class="toolbar">
+    <input
+      v-model="search"
+      @input="$emit('update:search', search)"
+      placeholder="Search by title or location..."
+    />
+
+    <select v-model="sortOrder" @change="$emit('update:sort', sortOrder)">
+      <option value="low">Price: Low → High</option>
+      <option value="high">Price: High → Low</option>
+    </select>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "SearchSortBar",
+  props: ["searchValue", "sortValue"],
+  data() {
+    return {
+      search: this.searchValue,
+      sortOrder: this.sortValue,
+    };
+  },
+};
+</script>
+
+<style scoped>
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+input {
+  padding: 10px;
+  width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+</style>

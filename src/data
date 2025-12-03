@@ -1,0 +1,29 @@
+export const properties = [
+  {
+    id: 1,
+    title: "Modern Apartment",
+    location: "New York",
+    price: 620000,
+    type: "Apartment",
+    available: true,
+    image: "mh.jpg"
+  },
+  {
+    id: 2,
+    title: "Beach House",
+    location: "Miami",
+    price: 8500000,
+    type: "House",
+    available: false,
+    image: "download.jpg"
+  },
+  {
+    id: 3,
+    title: "City Loft",
+    location: "Chicago",
+    price: 410000,
+    type: "Loft",
+    available: true,
+    image: "images.jpg"
+  }
+];
